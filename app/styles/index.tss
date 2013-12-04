@@ -1,0 +1,5 @@
+"#win": {
+	backgroundColor:"white",
+	layout: "vertical",
+	top: 20
+}
