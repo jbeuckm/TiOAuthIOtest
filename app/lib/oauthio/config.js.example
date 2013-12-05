@@ -1,0 +1,4 @@
+
+exports.server = "https://oauth.io";
+
+exports.key = "APP_PUBLIC_KEY_FROM_OAUTH.IO";

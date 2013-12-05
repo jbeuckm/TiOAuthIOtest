@@ -4,4 +4,4 @@ build
 npm-debug.log
 tmp
 .map
-/app/lib/oauthio/config.js
+/app/lib/oauthioPublicKey.js

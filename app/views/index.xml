@@ -1,7 +1,9 @@
 <Alloy>
 	<Window id="win">
 		<Button id="twitter" onClick="connect">Connect Twitter</Button>
+		<Button id="tweet" onClick="tweet">Tweet</Button>
+		<Button onClick="disconnect">Disconnect Twitter</Button>
+
 		<Button id="facebook" onClick="connect">Connect Facebook</Button>
-		<Button id="tumblr" onClick="connect">Connect Tumblr</Button>
 	</Window>
 </Alloy>

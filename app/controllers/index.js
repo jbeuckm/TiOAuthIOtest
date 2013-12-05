@@ -1,21 +1,35 @@
 
-$.index.open();
+$.win.open();
 
-var OAuth = require('org.beuckman.oauth.io');
+var oauthio = require("oauthio/oauthio");
+oauthio.init();
 
-OAuth.initWithKey({publicKey:"b4OEhwfv-5GbP9BN4AEpUS0swv4"});
-
-function connect(e) {
-	alert(e);
-    OAuth.connect({provider:e.source.id});
+function connect(e){
+	oauthio.connect(e.source.id);
+}
+function disconnect(e) {
+	
 }
 
+function tweet(e) {
+/*	
+	oauthio.makeRequest("twitter", "GET", "https://api.twitter.com/1.1/statuses/user_timeline.json", {}, 
+		function(resp) {
+			alert(e);
+		},
+		function(e) {
+			alert(e);
+		}
+	);
+*/
+	oauthio.makeRequest("twitter", "POST", "https://api.twitter.com/1.1/statuses/update.json", {status:"Test from OAuth.io"}, 
+		function(resp) {
+			alert(e);
+		},
+		function(e) {
+			alert(e);
+		}
+	);
 
-OAuth.addEventListener("auth", function(e){
-	alert(e);
-});
-
-OAuth.addEventListener("error", function(e){
-	Ti.API.error(e);
-});
+}
 
