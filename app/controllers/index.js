@@ -1,9 +1,8 @@
-
 $.index.open();
 
 var OAuth = require('org.beuckman.oauth.io');
 
-OAuth.initWithKey({publicKey:"b4OEhwfv-5GbP9BN4AEpUS0swv4"});
+OAuth.initWithKey({publicKey:"<redactified>"});
 
 function connect(e) {
 	alert(e);
