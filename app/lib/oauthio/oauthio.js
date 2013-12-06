@@ -26,6 +26,16 @@ OAuth.addEventListener("auth", function(e){
 	Ti.App.Properties.setObject("oauthio", tokens);
 });
 
+exports.getAccessToken = function(provider) {
+	var tokens = Ti.App.Properties.getObject("oauthio", {});
+	if (tokens[provider]) {
+		return tokens[provider].access_token;
+	}
+	else {
+		return null;
+	}
+};
+
 OAuth.addEventListener("error", function(e){
 	Ti.API.error(e);
 });
