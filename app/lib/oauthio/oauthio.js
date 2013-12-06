@@ -21,7 +21,8 @@ OAuth.addEventListener("auth", function(e){
 	var tokens = Ti.App.Properties.getObject("oauthio", {});
 	tokens[e.provider] = {
 		oauth_token: e.oauth_token,
-		oauth_token_secret: e.oauth_token_secret
+		oauth_token_secret: e.oauth_token_secret,
+		access_token: e.access_token
 	};
 	Ti.App.Properties.setObject("oauthio", tokens);
 });
