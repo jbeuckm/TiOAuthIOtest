@@ -5,6 +5,11 @@ function Controller() {
     function disconnectTwitter() {}
     function disconnectFacebook() {}
     function tweet() {
+        oauthio.makeRequest("twitter", "GET", "https://api.twitter.com/1.1/statuses/user_timeline.json", {}, function(resp) {
+            alert(resp);
+        }, function(e) {
+            alert(e);
+        });
         oauthio.makeRequest("twitter", "POST", "https://api.twitter.com/1.1/statuses/update.json", {
             status: "Test from OAuth.io"
         }, function(resp) {
